@@ -9,20 +9,25 @@ import { Link } from "expo-router";
         source={Logo} 
         style={{ width: 100, height: 100, marginBottom: 20 }}
       />
+       <br/>
     <Text style={styles.title}>Welcome to the Home Page!</Text> 
+    <br/>
     <span> </span>
-    <Text style={styles.card}>this is a list </Text>     
+    <Text style={styles.card}>this is a list </Text>    
+    <br/> 
     <Button title="Click Me" onPress={() => alert('Button Pressed!')} />
-    <span>
+    <br/>
     <Link href="/about">
       <Text style={styles.card}>Go to About Page</Text>
     </Link>
- </span>
- <span>
+    <br/>
+    <br/>
+    <br />
+ 
     <Link href="/contact">
       <Text style={styles.card}>Contact Page</Text>
     </Link>
-    </span>
+   
     </View>         
    );
 };
@@ -33,6 +38,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
+    padding: 20, 
     alignItems: "center",
     backgroundColor: "#f5f5f5",
     
