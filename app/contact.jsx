@@ -4,20 +4,42 @@ import { Link } from 'expo-router';
 
 export default function Contact() {
   return (
-    <View>
-    <Text>Contact page </Text>
-    <Link href="/">
+    <View style={styles.container}>
+ 
+    
+
+    
+      <View style={styles.box} />
+      <View style={styles.box} />
+      <View style={styles.box} />
+      <View style={styles.box} />
+
+      <Link href="/">
       <Text>Go to Home Page</Text>
     </Link>
-    </View> 
+
+   </View>    
+    
   )
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    flexDirection: "row",
+    flexWrap: "wrap",
     alignItems: "center",
-    backgroundColor: "#f5f5f5",
+    justifyContent: "space-between",
+    padding: 20,
+    border: "5px solid black",
+  },
+  box: {
+    width: "45%",
+    height: 150,
+    alignItems: "center",
+    backgroundColor: "lightblue",
+    marginBottom: 20,
+    border: "5px solid black",
+   
     
   },
   title: {

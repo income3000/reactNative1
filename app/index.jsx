@@ -1,34 +1,54 @@
-import { StyleSheet, Text, View, Image, Button } from "react-native";
-import Logo from '../assets/images/icon.png';       
+import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from "react-native";
+      
 import { Link } from "expo-router"; 
 
  const HomePage = () => {
   return (
-    <View style={styles.container}> 
-    <Image
-        source={Logo} 
-        style={{ width: 100, height: 100, marginBottom: 20 }}
-      />
-       <br/>
-    <Text style={styles.title}>Welcome to the Home Page!</Text> 
-    <br/>
-    <span> </span>
-    <Text style={styles.card}>this is a list </Text>    
-    <br/> 
-    <Button title="Click Me" onPress={() => alert('Button Pressed!')} />
-    <br/>
+     <View style={styles.container}>
+      <Text style={styles.card}>Welcome to the Home Page</Text>
+     
+        
+     <Link href="/page1">
+        <TouchableOpacity style={styles.box} onpress={ () => alert('Box 1 pressed!') }>
+          <Text>page 1</Text>
+          
+        </TouchableOpacity>
+        </Link>
+        <Link href="/page2">
+        <TouchableOpacity style={styles.box} onpress={ () => alert('Box 1 pressed!') }>
+          <Text>page 2</Text>
+          
+        </TouchableOpacity>
+        </Link>
+
+        <Link href="/page3">
+        <TouchableOpacity style={styles.box} onpress={ () => alert('Box 1 pressed!') }>
+          <Text>page 3</Text>
+          
+        </TouchableOpacity>
+        </Link>
+
+
+        <Link href="/page4">
+        <TouchableOpacity style={styles.box} onpress={ () => alert('Box 1 pressed!') }>
+          <Text>page 4</Text>
+          
+        </TouchableOpacity>
+        </Link>
+     
+          
+    
+         
     <Link href="/about">
-      <Text style={styles.card}>Go to About Page</Text>
+      <Text>Go to About Page</Text>
     </Link>
-    <br/>
-    <br/>
-    <br />
- 
+    <Link href="/page1">
+      <Text>Go Page</Text>
+    </Link>
     <Link href="/contact">
-      <Text style={styles.card}>Contact Page</Text>
+      <Text>Go to Contact Page</Text>
     </Link>
-   
-    </View>         
+       </View>     
    );
 };
             
@@ -37,10 +57,22 @@ export default HomePage;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    padding: 20, 
+    flexDirection: "row",
+    flexWrap: "wrap",
     alignItems: "center",
-    backgroundColor: "#f5f5f5",
+    justifyContent: "space-between",
+    padding: 20,
+    border: "5px solid black",
+  },
+  box: {
+    width: "200px",
+    height: "150px",
+    alignItems: "center",
+    backgroundColor: "lightblue",
+    marginBottom: 20,
+    padding: 50,
+    border: "5px solid black",
+   
     
   },
   title: {
@@ -49,14 +81,18 @@ const styles = StyleSheet.create({
     color: "#333",
     border: "5px solid black",
   },                                    
-    card: {  backgroundColor: "grey",       
+    card: {  backgroundColor: "grey", 
+      alignItems: "center",      
         padding: 20,    
         marginTop: 20,
-        borderRadius: 20,
+        marginLeft: "auto",   
+        marginRight: "auto",
+        BorderRadius: 20,
         width: "80%",
         textAlign: "center",
         fontSize: 28,
         border: "5px solid black",
+       
     },
     button: {
         marginTop: 20,
